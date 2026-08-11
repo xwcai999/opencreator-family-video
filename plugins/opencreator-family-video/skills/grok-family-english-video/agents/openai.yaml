@@ -1,0 +1,6 @@
+interface:
+  display_name: "OpenCreator 亲子情景英语视频"
+  short_description: "固定角色合同、ASR 对齐和安全路径门禁的视频工作流"
+  default_prompt: "使用 $grok-family-english-video 准备一条固定角色的 10 秒儿童情景英语双语视频。"
+policy:
+  allow_implicit_invocation: true

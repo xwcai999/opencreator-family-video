@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "character_set_id": "family-english-placeholder-v1",
+  "display_name": "Placeholder family contract",
+  "status": "active",
+  "generated_via": "user-supplied-provider",
+  "model": "provider-dependent",
+  "references": {
+    "family_master": {"file":"family-master.png","sha256":"0000000000000000000000000000000000000000000000000000000000000000"},
+    "father": {"file":"father.png","sha256":"0000000000000000000000000000000000000000000000000000000000000000"},
+    "mother": {"file":"mother.png","sha256":"0000000000000000000000000000000000000000000000000000000000000000"},
+    "child": {"file":"child.png","sha256":"0000000000000000000000000000000000000000000000000000000000000000"}
+  },
+  "reference_policy": {
+    "note": "Metadata-only example. Supply and license real images locally; do not commit them."
+  }
+}

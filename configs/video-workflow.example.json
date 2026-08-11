@@ -1,0 +1,10 @@
+{
+  "videoRoot": "./video-output",
+  "workspaceRoot": "./",
+  "grokExecutable": "grok",
+  "grokSessionRoot": "${USERPROFILE}/.grok/sessions",
+  "resolution": "480p",
+  "maxAttempts": 1,
+  "timeoutSeconds": 900,
+  "notes": "Replace paths locally; never commit credentials or generated media."
+}

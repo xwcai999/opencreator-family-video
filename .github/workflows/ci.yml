@@ -1,0 +1,46 @@
+name: offline-contracts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  powershell-contracts:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate plugin metadata
+        shell: pwsh
+        run: |
+          $manifest = Get-Content -Raw './plugins/opencreator-family-video/.codex-plugin/plugin.json' | ConvertFrom-Json
+          if ($manifest.name -ne 'opencreator-family-video') { throw 'invalid plugin name' }
+          if ($manifest.license -ne 'Apache-2.0') { throw 'license must be Apache-2.0' }
+          Get-Content -Raw './.agents/plugins/marketplace.json' | ConvertFrom-Json | Out-Null
+      - name: Run path and dialogue contracts
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File './plugins/opencreator-family-video/tests/test-family-dialogue-generator.ps1'
+          pwsh -NoProfile -File './plugins/opencreator-family-video/tests/test-path-contract.ps1'
+      - name: Scan for obvious secrets and private absolute roots
+        shell: pwsh
+        run: |
+          $tracked = Get-ChildItem -Recurse -File -Force | Where-Object { $_.FullName -notmatch '\\node_modules\\' }
+          $bad = $tracked | Select-String -Pattern '(?i)(sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|C:\\Users\\[^\\]+\\\.grok|D:\\claw)' -ErrorAction SilentlyContinue
+          if ($bad) { $bad | Format-List; throw 'secret or private absolute path pattern found' }
+      - name: Validate no generated media in package
+        shell: pwsh
+        run: |
+          $bad = Get-ChildItem -Recurse -File -Force | Where-Object { $_.Extension -in '.mp4','.mov','.wav','.mp3','.png','.jpg','.jpeg','.webp' }
+          if ($bad) { $bad | Select-Object FullName; throw 'generated media must not be committed' }
+  node-self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: ASR parser self-test
+        run: node plugins/opencreator-family-video/scripts/transcribe-agentplan-asr.mjs --self-test

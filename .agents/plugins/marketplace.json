@@ -1,0 +1,20 @@
+{
+  "name": "opencreator",
+  "interface": {
+    "displayName": "OpenCreator 内容创作开源阵营"
+  },
+  "plugins": [
+    {
+      "name": "opencreator-family-video",
+      "source": {
+        "source": "local",
+        "path": "./plugins/opencreator-family-video"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Video"
+    }
+  ]
+}

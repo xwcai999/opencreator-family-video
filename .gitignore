@@ -1,0 +1,41 @@
+# Credentials and local provider state
+.env
+.env.*
+*.pem
+*.key
+*.secret
+auth.json
+.grok/
+.grok-sessions/
+sessions/
+browser-profile/
+
+# Runtime outputs and private media
+video-output/
+media-output/
+*.mp4
+*.mov
+*.webm
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.ass
+manifest.json
+request.json
+prompt.txt
+semantic-review.json
+*识别结果*.json
+grok-debug.log
+grok-launcher-transcript.txt
+.grok-media-budget/
+
+# Local test artifacts
+.test-*/
+coverage/
+node_modules/
+__pycache__/
+*.log

@@ -1,0 +1,31 @@
+{
+  "name": "opencreator-family-video",
+  "version": "0.1.0",
+  "description": "A guarded, contract-first workflow for 10-second bilingual family English videos.",
+  "author": {
+    "name": "xwcai999",
+    "url": "https://github.com/xwcai999"
+  },
+  "homepage": "https://github.com/xwcai999/opencreator-family-video",
+  "repository": "https://github.com/xwcai999/opencreator-family-video",
+  "license": "Apache-2.0",
+  "keywords": ["video", "bilingual", "english-learning", "grok", "opencreator"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OpenCreator 亲子情景英语视频",
+    "shortDescription": "固定角色、ASR 对齐和安全门禁的双语短视频工作流",
+    "longDescription": "编排外部 Grok、OpenCode Go 和火山引擎 ASR；不内置模型、凭据或真实媒体资产。",
+    "developerName": "OpenCreator",
+    "category": "Video",
+    "capabilities": ["Generate", "Review", "Write"],
+    "websiteURL": "https://github.com/xwcai999/opencreator-family-video",
+    "privacyPolicyURL": "https://github.com/xwcai999/opencreator-family-video/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/xwcai999/opencreator-family-video/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "准备一条亲子情景英语视频任务",
+      "检查已有视频的 ASR 和字幕合同",
+      "审计视频任务的路径和媒体权限"
+    ],
+    "brandColor": "#0F766E"
+  }
+}

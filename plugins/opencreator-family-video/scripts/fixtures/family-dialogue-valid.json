@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kind": "family-english-micro-scene",
+  "source_model": "deepseek-v4-flash",
+  "dialogue": [
+    {"speaker":"child","english":"Can I help with breakfast?","chinese":"我可以帮忙做早餐吗？","action":"The child points to the counter.","start_hint_ms":500,"end_hint_ms":1900},
+    {"speaker":"mother","english":"Yes, please bring the milk.","chinese":"好的，请把牛奶拿来。","action":"The mother points to the milk.","start_hint_ms":2200,"end_hint_ms":3800},
+    {"speaker":"child","english":"Here is the milk.","chinese":"牛奶在这里。","action":"The child carries the milk carefully.","start_hint_ms":4100,"end_hint_ms":5300},
+    {"speaker":"father","english":"Great job, thank you!","chinese":"做得好，谢谢你！","action":"The father smiles and gives a thumbs up.","start_hint_ms":5600,"end_hint_ms":7000}
+  ]
+}
