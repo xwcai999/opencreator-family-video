@@ -15,6 +15,10 @@
 - 真实媒体、角色图片、音轨、ASR 原始响应、manifest、日志、会话缓存和浏览器配置
   必须留在本地，并且需要独立确认模型服务与素材授权。
 
+## OpenCreator 生态
+
+本项目属于 [OpenCreator](https://github.com/xwcai999/opencreator) 生态，兄弟项目包括 [OpenCreator Novel](https://github.com/xwcai999/opencreator-novel)、[OpenCreator Music](https://github.com/xwcai999/opencreator-music) 和 [OpenCreator Dashboard](https://github.com/xwcai999/opencreator-dashboard)。各仓库保持独立安装与独立版本。
+
 ## 离线验证
 
 ```powershell

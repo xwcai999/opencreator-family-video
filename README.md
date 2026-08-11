@@ -43,6 +43,10 @@ pwsh -NoProfile -File .\plugins\opencreator-family-video\scripts\run-family-engl
 
 The scripts reject candidate files outside the video root, UNC/device paths, wildcard or environment expansion, and link/reparse traversal. Full generation also enforces the configured media-call budget and never treats preset dialogue as the actual audio transcript.
 
+## OpenCreator ecosystem
+
+This project is part of [OpenCreator](https://github.com/xwcai999/opencreator), alongside [OpenCreator Novel](https://github.com/xwcai999/opencreator-novel), [OpenCreator Music](https://github.com/xwcai999/opencreator-music), and [OpenCreator Dashboard](https://github.com/xwcai999/opencreator-dashboard). Each repository remains independently installable and versioned.
+
 ## Offline validation
 
 ```powershell
@@ -56,4 +60,3 @@ These commands do not call Grok, a text model, or ASR.
 Read [MODEL_AND_MEDIA_RIGHTS.md](MODEL_AND_MEDIA_RIGHTS.md), [SECURITY.md](SECURITY.md), [PRIVACY.md](PRIVACY.md), [TERMS.md](TERMS.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) before connecting a provider or publishing media.
 
 Code is Apache-2.0. The vendored `ws` runtime remains MIT licensed. This project is not affiliated with or endorsed by OpenAI, xAI, ByteDance, or the named providers.
-
